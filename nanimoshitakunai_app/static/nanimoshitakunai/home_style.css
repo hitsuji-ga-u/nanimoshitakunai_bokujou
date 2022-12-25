@@ -1,0 +1,151 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+footer {
+    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    font-size: 40%;
+    width: 100%;
+}
+
+footer img{
+    display: none;
+}
+
+.home {
+    margin: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100px;
+}
+
+.home #mountain {
+    position: absolute;
+    width: 1600px;
+    bottom: calc((100vh - 1000px)/2);
+    left: calc((100vw - 1600px)/2); 
+}
+
+#sheep1 {
+    position: absolute;
+    width: 400px;
+    top: calc((100vh - 1200px)/2 + 440px);
+    left: calc((100vw - 1600px)/2 + 700px);
+    transform: translatex(-50%);
+}
+#sheep2 {
+    position: absolute;
+    top: calc((100vh - 1200px)/2 + 430px);
+    left: calc((100vw - 1600px)/2 + 360px);
+    transform: translatex(-50%);
+}
+#shop {
+    position: absolute;
+    width: 400px;
+    top: calc((100vh - 1200px)/2 + 620px);
+    left: calc((100vw - 1600px)/2 + 1200px);
+    transform: translatex(-50%);
+}
+#game {
+    position: absolute;
+    top: calc((100vh - 1200px)/2 + 780px);
+    left: calc((100vw - 1600px)/2 + 220px);
+    width: 100px;
+    rotate: -30deg;
+    transform: translatex(-50%);
+}
+
+#nanimoshitakunai {
+    position: absolute;
+    rotate: -10deg;;
+    top: calc((100vh - 1200px)/2 + 250px);
+    left: calc((100vw - 1600px)/2 + 320px);
+}
+
+
+.home__menu {
+    position: absolute;
+    bottom: 400px;
+    right: 8%;
+    text-align: left;
+}
+
+.menu__items {
+    height: 50px;
+}
+
+#pointer {
+    width: 100px;
+    position: absolute;
+    bottom: 250px;
+    left: -120px;
+}
+
+.home__menu a{
+    margin: 0px;
+    line-height: 2em;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: 0s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    font-size: 2.2em;
+}
+
+.home__menu li{
+    list-style: none;
+}
+
+
+/* @media only screen and (min-width: 1550px) {
+    .home #mountain {
+        position: absolute;
+        width: 100%;
+    }
+}
+*/
+
+@media only screen and (max-width: 960px) {
+    .home__menu {
+        position: absolute;
+        bottom: 400px;
+        right: 4%;
+        text-align: left;
+    }
+    
+    .menu__items {
+        height: 40px;
+    }
+
+    .home__menu a{
+        margin: 0px;
+        line-height: 1.8em;
+        display: inline-block;
+    }
+
+    #pointer {
+        width: 75px;
+        position: absolute;
+        bottom: 250px;
+        left: -83px;
+    }
+    
+    
+}
+
+/*
+@media only screen and (max-width: 520px) {
+    .home #mountain {
+        position: absolute;
+        width: 800px;
+        left: -50px;
+
+    }
+
+}
+ */

@@ -1,0 +1,26 @@
+{% extends "nanimoshitakunai/base.html" %}
+{% load static %}
+
+{% block title %}{{post.title}}{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'nanimoshitakunai/post_style.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="post">
+    <div class="post__cover">
+        {% if "thumbnail" in post %}
+        <img class="post__img" src="{{ post.thumbnail.url }}">
+        {% else %}
+        <img class="post__img" src="{% static 'nanimoshitakunai/imgs/shop.png' %}">
+        {% endif %}
+        <div class="post__title">
+            {{post.title}}
+        </div>
+    </div>
+
+    {% autoescape off %}
+    {{post.text}}
+    {% endautoescape%}
+</section>
+{% endblock %}

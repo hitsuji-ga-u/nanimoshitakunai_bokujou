@@ -1,0 +1,92 @@
+
+.animal__info {
+    margin-bottom: 80px;
+}
+
+.animal__pic {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.animal__pic img {
+    border: solid 5px #49413C;
+    border-radius: 30px;
+    background-color: #aed768d5;
+    width: 80%;
+    max-width: 600px;
+}
+
+.animal__name {
+    font-size: 46px;
+    margin: 0 auto;
+    color: #9ec758;
+}
+
+.animal__properties {
+    text-align: center;
+    font-size: 26px;
+    list-style: none;
+}
+
+
+.posts {
+    margin: 0;
+}
+
+.animal__category {
+    font-size: 32px;
+    margin: 60px 40px 1px;
+}
+
+
+.animal__slider {
+    width: 100vw;
+    display: flex;
+}
+
+.animal__posts {
+    display: flex;
+    overflow: scroll;
+    flex-basis: auto;
+}
+
+
+.animal__post {
+    border: solid 2px #49413C;
+    border-radius: 15px;
+    width: 320px;
+    height: 350px;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.animal__post_title {
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 26px;
+    vertical-align: middle;
+    display: flex;
+    align-content: center;    
+    justify-content: center;
+}
+
+.animal__post_img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0 ;
+}
+
+.animal__post_title p {
+    display: inline-block;
+    margin: auto;
+}
+
+.animal__handler {
+    height: 350px;
+    flex-basis: 40px;
+    background-color: #e6f6f9;
+    opacity: 0.5;
+}
+

@@ -1,0 +1,28 @@
+{% extends "nanimoshitakunai/base.html" %}
+{% load static %}
+
+{% block title %}何もしたくない牧場{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'nanimoshitakunai/home_style.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="home">
+    <img id="mountain" src="{% static 'nanimoshitakunai/imgs/mountain@2x.png' %}">
+    <img id="nanimoshitakunai" src="{% static 'nanimoshitakunai/imgs/nanimoshitakunai.png' %}"> 
+    <img id="sheep2" src="{% static 'nanimoshitakunai/imgs/sheep2.png' %}">
+    <img id="game" src="{% static 'nanimoshitakunai/imgs/game.png' %}"> 
+    <img id="shop" src="{% static 'nanimoshitakunai/imgs/shop@2x.png' %}">
+    <img id="sheep1" src="{% static 'nanimoshitakunai/imgs/sheep1@3x.png' %}">
+    
+    <div class="home__menu">
+        <img id="pointer" src="{% static 'nanimoshitakunai/imgs/sheep4-longlong.png' %}">
+        <li><a href="{% url 'about' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/about.png' %}"></a></li>
+        <li><a href="{% url 'animals_index' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/animals.png' %}"></a></li>
+        <li><a href="{% url 'shop' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
+        <li><a href="{% url 'playground' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}"></a></li>
+        <li><a href="{% url 'faq' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/information.png' %}"></a></li>
+    </div>
+</div>
+{% endblock %}

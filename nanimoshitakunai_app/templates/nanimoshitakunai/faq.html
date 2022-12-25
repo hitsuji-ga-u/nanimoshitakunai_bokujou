@@ -1,0 +1,26 @@
+{% extends "nanimoshitakunai/base.html" %}
+{% load static %}
+
+{% block title %}よくある質問{% endblock %}
+
+{% block body %}
+    <section class="faq">
+        <h1>よくある質問</h1>
+        <li>今日って何日ですか？</li>
+        <p>20xx/xx/xxです</p>
+        <li>最近いくら寝ても眠いです。どうしたら良いでしょうか？</li>
+        <li>世界の真ん中にいる虫ってなーんだ？</li>
+    </section>
+    <section class="question">
+        <h1>お問い合わせ・ご感想フォーム</h1>
+        <div class="question__name">
+            <label for="name">お名前</label><br>
+            <input id="name" name="name">
+        </div>
+        <div>
+            <label for="question">お問い合わせ・ご感想内容</label><br>
+            <textarea id="question" rows="10"></textarea>
+            <p>※現在，「楽しかったです」以外のお問い合わせ・ご感想は受けつけておりません．ご了承ください．</p>
+        </div>
+    </section>
+{% endblock %}

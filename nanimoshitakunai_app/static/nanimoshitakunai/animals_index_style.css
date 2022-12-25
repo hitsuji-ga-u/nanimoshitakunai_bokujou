@@ -1,0 +1,30 @@
+.animals__index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.animal {
+    background-color: #fafafa;
+    margin: 30px 10px;
+    border: #49413C solid 5px;
+    border-radius: 10px;
+}
+
+.animal__pic {
+    margin-bottom: 10px;
+    border-bottom: solid 5px #49413C;
+    border-radius: 5px 5px 0 0 ;
+    background-color: #aed768d5;
+    width: 300px;
+    z-index: -100;
+}
+.animal__properties {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.animal__name {
+    margin: 0 auto;
+    color: #aed768;
+}
+

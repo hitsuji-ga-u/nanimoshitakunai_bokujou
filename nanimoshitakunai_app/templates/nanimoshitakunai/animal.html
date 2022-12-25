@@ -1,0 +1,55 @@
+{% extends "nanimoshitakunai/base.html" %}
+{% load static %}
+
+{% block title %}{{ animal.name }}{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'nanimoshitakunai/animal_style.css' %}">
+{% endblock %}
+{% block body %}
+<section class="animal">
+    <div class="animal__info">
+        <div class="animal__pic">
+            <img  src="{% static animal.path %}" >
+        </div>
+        <div class="animal__properties">
+            <div class="animal__name">{{ animal.name }}</div>
+            <li>特徴：{{ animal.info }}</li>
+        <li>得意なこと：{{ animal.skill }}</li>
+    </div>
+    </div>
+</section>
+
+<section class="posts">
+    {% for posts in cat_posts %}
+    {% if posts|length %}
+    <div class="animal__category">{{ posts.0.category.category }}についてのはなし</div>
+
+    <div class="animal__slider">
+        <div class="animal__handler" id="animal__handler-prev"></div>
+        <div class="animal__posts">
+        {% for post in posts %}
+        <a href="{% url 'post' animal.id post.category.id post.id %}">
+            <div class="animal__post">
+                {% if "thumbnail" in post %}
+                <img class="animal__post_img" src="{{ post.thumbnail.url }}">
+                {% else %}
+                <img class="animal__post_img" src="{% static 'nanimoshitakunai/imgs/shop.png' %}">
+                {% endif %}
+                
+                <div class="animal__post_title">
+                    <p>{{ post.title }}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+        </div>
+        <div class="animal__handler" id="animal__handler-next"></div>
+    </div>
+    
+
+    {% endif %}
+    {% endfor %}
+</section>
+{% endblock %}
+
+<!-- サムネイルは 320x240 高さ240に合わせて調整される  -->
