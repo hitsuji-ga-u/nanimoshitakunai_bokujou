@@ -128,9 +128,9 @@ def get_animals_index():
 
 
 urlpatterns = [
-    distill_path('home', views.home, name='home',
+    distill_path('home/', views.home, name='home',
         distill_func=get_home,
-        distill_file='index.html'),
+        distill_file='home.html'),
 
     distill_path('about/', views.about, name='about',
         distill_func=get_about,
