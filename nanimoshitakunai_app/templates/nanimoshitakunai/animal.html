@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block title %}{{ animal.name }}{% endblock %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'nanimoshitakunai/animal_style.css' %}">
 {% endblock %}
+
 {% block body %}
 <section class="animal">
     <div class="animal__info">

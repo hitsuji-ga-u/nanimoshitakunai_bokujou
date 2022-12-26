@@ -10,6 +10,10 @@ BASE_URL = getattr(settings, "BASE_URL", None)
 API_KEY = getattr(settings, "API_KEY", None)
 HEADERS = {'X-MICROCMS-API-KEY': API_KEY}
 
+print(' views.py headers  >> ' * 10)
+print(HEADERS)
+print(' views.py headers  <<  ' * 10)
+
 
 # Create your views here.
 def home(request):
@@ -53,9 +57,6 @@ def animals_index(request):
 
 
 
-[{'id': 'opencv'}, {'id': 'matplotlib'}]
-
-
 def animal(request, animal_id):
     # 指定された親カテゴリを持つサブカテゴリのidを取得
     subcat_end_pt = f'/category?filters=parentcategory[equals]{animal_id}&fields=id'
@@ -84,7 +85,6 @@ def animal(request, animal_id):
         'animal': ANIMALS[animal_index],
         'cat_posts': posts
     }
-    pprint(context)
     return render(request, 'nanimoshitakunai/animal.html', context)
 
 
@@ -103,6 +103,7 @@ def about(request):
 
 def shop(request):
     return redirect('https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share')
+    # return render(request, 'nanimoshitakunai/about.html')
 
 def access(request):
     return render(request, 'nanimoshitakunai/access.html')
