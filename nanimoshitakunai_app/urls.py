@@ -130,7 +130,7 @@ def get_animals_index():
 urlpatterns = [
     distill_path('home', views.home, name='home',
         distill_func=get_home,
-        distill_file='home.html'),
+        distill_file='index.html'),
 
     distill_path('about/', views.about, name='about',
         distill_func=get_about,
@@ -142,6 +142,7 @@ urlpatterns = [
     distill_path('playground/', views.access, name='playground',
         distill_file='access.html',
         distill_func=get_access),
+    
     distill_path('faq/', views.faq, name='faq',
         distill_file='faq.html',
         distill_func=get_faq),

@@ -21,7 +21,7 @@ def home(request):
         'categories': categories['contents']
     }
 
-    return render(request, 'nanimoshitakunai/home.html', context)
+    return render(request, 'nanimoshitakunai/index.html', context)
 
 # カテゴリAPIから取得できる['contents']の内容
 # {'category': 'blender',
