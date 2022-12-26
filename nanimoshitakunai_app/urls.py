@@ -128,21 +128,21 @@ def get_animals_index():
 
 
 urlpatterns = [
-    distill_path('', views.home, name='home',
+    distill_path('home', views.home, name='home',
         distill_func=get_home,
         distill_file='home.html'),
 
-    distill_path('about', views.about, name='about',
+    distill_path('about/', views.about, name='about',
         distill_func=get_about,
         distill_file='about.html'),
 
-    distill_path('omiyageshop', views.shop, name='shop',
+    distill_path('omiyageshop/', views.shop, name='shop',
         distill_status_codes=(200, 302)),
     
-    distill_path('playground', views.access, name='playground',
+    distill_path('playground/', views.access, name='playground',
         distill_file='access.html',
         distill_func=get_access),
-    distill_path('faq', views.faq, name='faq',
+    distill_path('faq/', views.faq, name='faq',
         distill_file='faq.html',
         distill_func=get_faq),
     
@@ -150,10 +150,10 @@ urlpatterns = [
         distill_file='animals_index.html',
         distill_func=get_animals_index),
 
-    distill_path('animals/<str:animal_id>-index', views.animal, name='animal',
+    distill_path('animals/<str:animal_id>-index/', views.animal, name='animal',
         distill_func=get_animals),
 
-    distill_path('animals/<str:animal_id>/<str:cat_id>/<str:post_id>', views.post, name='post',
+    distill_path('animals/<str:animal_id>/<str:cat_id>/<str:post_id>/', views.post, name='post',
         distill_func=get_posts),
 ]
 

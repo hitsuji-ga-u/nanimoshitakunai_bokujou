@@ -10,10 +10,6 @@ BASE_URL = getattr(settings, "BASE_URL", None)
 API_KEY = getattr(settings, "API_KEY", None)
 HEADERS = {'X-MICROCMS-API-KEY': API_KEY}
 
-print(' views.py headers  >> ' * 10)
-print(HEADERS)
-print(' views.py headers  <<  ' * 10)
-
 
 # Create your views here.
 def home(request):
