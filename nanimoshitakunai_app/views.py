@@ -118,6 +118,8 @@ def animals_index(request):
     #     'animals': ANIMALS_
     # }
 
+    print('make    animals index   '* 10)
+
     return render(request, 'nanimoshitakunai/about.html')
 
     return render(request, 'nanimoshitakunai/animals-index.html')
