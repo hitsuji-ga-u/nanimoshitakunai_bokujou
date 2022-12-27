@@ -17,8 +17,6 @@ api_key = getattr(settings, "API_KEY", None)
 headers = {'X-MICROCMS-API-KEY': api_key}
 
 
-print(headers)
-
 def get_animals():
     for ani in ANIMALS:
         yield ani['id']
@@ -58,35 +56,7 @@ def get_posts():
         else:
             animal_id = post['category']['parentcategory']['id']
         yield {'cat_id': category, 'animal_id': animal_id, 'post_id': post_id}
-        # yield {'animal_id': animal_id, 'cat_id': category, 'post_id': post_id}
 
-
-    # end_pt = f'/post?ids={post_id}'
-
-    # post_res = requests.request('GET', BASE_URL+end_pt, headers=HEADERS).json()
-    # context = {
-    #     'post': post_res['contents'][0]
-    # }
-    # return render(request, 'nanimoshitakunai/post.html', context)
-
-
-
-    # yield {'animal_id': , 'cat_id':, 'post_id': }
-
-def get_home():
-    return None
-
-def get_about():
-    return None
-
-def get_access():
-    return None
-
-def get_faq():
-    return None
-
-def get_animals_index():
-    return None
 
 
 # def get_pages():
@@ -128,28 +98,26 @@ def get_animals_index():
 
 
 urlpatterns = [
+    distill_path('', views.index, name='index',
+        distill_status_codes=(200, 302)),
+
     distill_path('home/', views.home, name='home',
-        distill_func=get_home,
         distill_file='home.html'),
 
     distill_path('about/', views.about, name='about',
-        distill_func=get_about,
         distill_file='about.html'),
 
     distill_path('omiyageshop/', views.shop, name='shop',
         distill_status_codes=(200, 302)),
     
     distill_path('playground/', views.access, name='playground',
-        distill_file='access.html',
-        distill_func=get_access),
+        distill_file='access.html'),
     
     distill_path('faq/', views.faq, name='faq',
-        distill_file='faq.html',
-        distill_func=get_faq),
+        distill_file='faq.html'),
     
     distill_path('animals/', views.animals_index, name='animals_index',
-        distill_file='animals_index.html',
-        distill_func=get_animals_index),
+        distill_file='animals_index.html'),
 
     distill_path('animals/<str:animal_id>-index/', views.animal, name='animal',
         distill_func=get_animals),
