@@ -120,9 +120,7 @@ def animals_index(request):
 
     print('make    animals index   '* 10)
 
-    return render(request, 'nanimoshitakunai/animals-index.html')
-
-    # return render(request, 'nanimoshitakunai/animals-index.html', context)
+    return render(request, 'nanimoshitakunai/animals-index.html', context)
 
 
 def animal(request, animal_id):
