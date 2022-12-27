@@ -20,7 +20,8 @@
         <img id="pointer" src="{% static 'nanimoshitakunai/imgs/sheep4-longlong.png' %}">
         <li><a href="{% url 'about' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/about.png' %}"></a></li>
         <li><a href="{% url 'animals_index' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/animals.png' %}"></a></li>
-        <li><a href="https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
+        <!-- <li><a href="https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li> -->
+        <li><a href="{% url 'shop' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
         <li><a href="{% url 'playground' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}"></a></li>
         <li><a href="{% url 'faq' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/information.png' %}"></a></li>
     </div>
