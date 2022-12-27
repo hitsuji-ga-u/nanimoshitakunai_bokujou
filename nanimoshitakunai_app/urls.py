@@ -9,8 +9,7 @@ from django.conf import settings
 import requests
 import math
 
-# from .animals import ANIMALS
-from .views import ANIMALS
+from .animals import ANIMALS
 
 
 url = getattr(settings, "BASE_URL", None)
