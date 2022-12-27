@@ -1,29 +1,12 @@
 {% extends "nanimoshitakunai/base.html" %}
-
 {% load static %}
 
-{% block title %}どうぶつたち{% endblock %}
-
-
-{% block css %}
-<link rel="stylesheet" href="{% static 'nanimoshitakunai/animals_index_style.css' %}">
-{% endblock %}
+{% block title %}どんな牧場？{% endblock %}
 
 {% block body %}
-    <section class="animals">
-        <!-- <img class="__titleimg" src="{% static 'nanimoshitakunai/imgs/animals.png' %}">
-
-        <div class="animals__index">
-        {% for animal in animals %}
-            <a class="animal" href="{% url 'animal' animal.id %}">
-                <img class="animal__pic" src="{% static  animal.path %}">
-                <div class="animal__properties">
-                <h2 class="animal__name">{{ animal.name }}</h2>
-                    <li>特徴：{{ animal.info }}</li>
-                    <li>得意なこと：{{ animal.skill }}</li>
-                </div>
-            </a>
-            {% endfor %}
-        </div> -->
+    <section class="what">
+        <h1>animals-index</h1>
+        <p>全てはその一言から始まりました．時は平成．</p>
+        <p>めんどくさがりな牧場主が．．</p>
     </section>
 {% endblock %}
