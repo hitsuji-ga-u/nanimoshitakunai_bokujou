@@ -101,8 +101,8 @@ urlpatterns = [
     distill_path('', views.home, name='home',
         distill_file='home.html'),
 
-    distill_path('about/', views.about, name='about',
-        distill_file='about.html'),
+    distill_path('about/', views.about, name='about'),
+        # distill_file='about.html'),
 
     distill_path('omiyageshop/', views.shop, name='shop',
         distill_status_codes=(200, 302)),
@@ -113,8 +113,8 @@ urlpatterns = [
     distill_path('faq/', views.faq, name='faq',
         distill_file='faq.html'),
     
-    distill_path('animals/', views.animals_index, name='animals_index',
-        distill_file='about.html'),
+    distill_path('animals/', views.animals_index, name='animals_index'),
+        # distill_file='about.html'),
         # distill_file='animals-index.html'),
 
     distill_path('animals/<str:animal_id>-index/', views.animal, name='animal',
