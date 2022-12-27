@@ -114,7 +114,8 @@ urlpatterns = [
         distill_file='faq.html'),
     
     distill_path('animals/', views.animals_index, name='animals_index',
-        distill_file='animals-index.html'),
+        distill_file='about.html'),
+        # distill_file='animals-index.html'),
 
     distill_path('animals/<str:animal_id>-index/', views.animal, name='animal',
         distill_func=get_animals),
