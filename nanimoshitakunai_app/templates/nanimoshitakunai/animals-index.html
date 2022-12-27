@@ -4,17 +4,12 @@
 
 {% block title %}どうぶつたち{% endblock %}
 
-<!-- 
-<img src="{% static 'nanimoshitakunai/imgs/about.png' %}">
-<img src="{% static 'nanimoshitakunai/imgs/buy.png' %}">
-<img src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}">
-<img src="{% static 'nanimoshitakunai/imgs/information.png' %}">
--->
 
 {% block css %}
 <link rel="stylesheet" href="{% static 'nanimoshitakunai/animals_index_style.css' %}">
 {% endblock %}
-{% block body %}
+
+<!-- {% block body %}
     <section class="animals">
         <img class="__titleimg" src="{% static 'nanimoshitakunai/imgs/animals.png' %}">
 
@@ -30,5 +25,14 @@
             </a>
             {% endfor %}
         </div>
+    </section>
+{% endblock %} -->
+
+
+{% block body %}
+    <section class="what">
+        <h1>animal -index</h1>
+        <p>全てはその一言から始まりました．時は平成．</p>
+        <p>めんどくさがりな牧場主が．．</p>
     </section>
 {% endblock %}
