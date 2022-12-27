@@ -23,7 +23,6 @@ def get_animals():
         yield ani['id']
 
 
-
 def get_posts():
     """
     記事詳細ページを生成するためのpost idを返す
@@ -99,10 +98,7 @@ def get_posts():
 
 
 urlpatterns = [
-    distill_path('', views.index, name='index',
-        distill_status_codes=(200, 302)),
-
-    distill_path('home/', views.home, name='home',
+    distill_path('', views.home, name='home',
         distill_file='home.html'),
 
     distill_path('about/', views.about, name='about',

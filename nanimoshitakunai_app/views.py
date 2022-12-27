@@ -86,9 +86,6 @@ ANIMALS = [
 
 ]
 
-def index(request):
-    return redirect("home")
-
 # Create your views here.
 def home(request):
     return render(request, 'nanimoshitakunai/home.html')
