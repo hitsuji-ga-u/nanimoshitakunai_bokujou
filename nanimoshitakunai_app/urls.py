@@ -108,7 +108,7 @@ urlpatterns = [
         distill_status_codes=(200, 302)),
     
     distill_path('playground/', views.access, name='playground',
-        distill_file='access.html'),
+        distill_file='playground.html'),
     
     distill_path('faq/', views.faq, name='faq',
         distill_file='faq.html'),
