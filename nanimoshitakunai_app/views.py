@@ -118,9 +118,10 @@ def animals_index(request):
     #     'animals': ANIMALS_
     # }
 
+    return render(request, 'nanimoshitakunai/about.html')
 
     return render(request, 'nanimoshitakunai/animals-index.html')
-    return render(request, 'nanimoshitakunai/animals-index.html', context)
+    # return render(request, 'nanimoshitakunai/animals-index.html', context)
 
 
 def animal(request, animal_id):
