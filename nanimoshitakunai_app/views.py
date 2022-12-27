@@ -119,6 +119,7 @@ def animals_index(request):
     }
 
 
+    return render(request, 'nanimoshitakunai/animals-index.html')
     return render(request, 'nanimoshitakunai/animals-index.html', context)
 
 
