@@ -1,4 +1,4 @@
 [[redirects]]
-from = "/"
-to = "/home/"
-force = ture
+  from = "/"
+  to = "/home"
+  force = ture
