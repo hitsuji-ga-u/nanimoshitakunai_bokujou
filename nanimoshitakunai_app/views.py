@@ -27,18 +27,16 @@ def home(request):
 
 
 def animals_index(request):
-    # end_pt = '/category?fields=category,id&filters=parentcategory[not_exists]'
-    # main_categories = requests.request(
-    #     'GET', BASE_URL+end_pt, headers=HEADERS).json()
+    end_pt = '/category?fields=category,id&filters=parentcategory[not_exists]'
+    main_categories = requests.request(
+        'GET', BASE_URL+end_pt, headers=HEADERS).json()
 
-    # if main_categories['totalCount'] > len(ANIMALS):
-    #     raise ValueError()
+    if main_categories['totalCount'] > len(ANIMALS):
+        raise ValueError()
 
-    # for i, cat in enumerate(main_categories['contents']):
-    #     ANIMALS[i]['id'] = cat['id']
-    #     ANIMALS[i]['skill'] = cat['category']
-
-
+    for i, cat in enumerate(main_categories['contents']):
+        ANIMALS[i]['id'] = cat['id']
+        ANIMALS[i]['skill'] = cat['category']
     
     context = {
         'animals': ANIMALS
