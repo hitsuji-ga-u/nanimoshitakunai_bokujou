@@ -27,7 +27,7 @@ header img {
 
 body {
     overflow-x: hidden;
-    width: 100%;
+    width: 100vw;
 }
 
 section {
@@ -68,14 +68,9 @@ p {
 }
 
 footer {
-    font-size: 40%;
     width: 100%;
-}
-
-footer {
     position: relative;
-    font-size: 40%;
-    
+    font-size: 40%;   
 }
 
 footer img {
