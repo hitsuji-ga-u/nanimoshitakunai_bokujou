@@ -5,12 +5,6 @@ body {
     position: relative;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    font-size: 40%;
-    width: 100%;
-}
 
 footer img {
     display: none;
@@ -21,6 +15,7 @@ footer img {
     text-align: center;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 .home #mountain {

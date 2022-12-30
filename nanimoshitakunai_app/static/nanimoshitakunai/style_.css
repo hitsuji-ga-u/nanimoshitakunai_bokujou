@@ -71,8 +71,14 @@ p {
 }
 
 footer {
-    position: sticky;
     font-size: 40%;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+    font-size: 40%;
+    
 }
 
 footer img {

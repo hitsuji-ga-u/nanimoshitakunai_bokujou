@@ -18,11 +18,37 @@
     
     <div class="home__menu">
         <img id="pointer" src="{% static 'nanimoshitakunai/imgs/sheep4-longlong.png' %}">
-        <li><a href="{% url 'about' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/about.png' %}"></a></li>
-        <li><a href="{% url 'animals_index' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/animals.png' %}"></a></li>
-        <li><a href="https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
-        <li><a href="{% url 'playground' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}"></a></li>
-        <li><a href="{% url 'faq' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/information.png' %}"></a></li>
+        <li><a id="about" href="{% url 'about' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/about.png' %}"></a></li>
+        <li><a id="animals" href="{% url 'animals_index' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/animals.png' %}"></a></li>
+        <li><a id="buy" href="https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
+        <li><a id="enjoy" href="{% url 'playground' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}"></a></li>
+        <li><a id="information" href="{% url 'faq' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/information.png' %}"></a></li>
     </div>
 </div>
+
+<script type="text/javascript">
+    const about = document.getElementById('about');
+    const animals = document.getElementById('animals');
+    const buy = document.getElementById('buy');
+    const enjoy = document.getElementById('enjoy');
+    const information = document.getElementById('information');
+    const pointer = document.getElementById('pointer')
+ 
+    about.addEventListener('mouseover', function() {
+      pointer.style.top = (-170 + 0 * 20)  + '%';
+    });
+    animals.addEventListener('mouseover', function() {
+      pointer.style.top = (-170 + 1 * 20)  + '%';
+    });
+    buy.addEventListener('mouseover', function() {
+      pointer.style.top = (-170 + 2 * 20)  + '%';
+    });
+    enjoy.addEventListener('mouseover', function() {
+      pointer.style.top = (-170 + 3 * 20)  + '%';
+    });
+    information.addEventListener('mouseover', function() {
+      pointer.style.top = (-170 + 4 * 20)  + '%';
+    });
+
+</script>
 {% endblock %}
