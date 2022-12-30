@@ -104,6 +104,7 @@ a:hover{
 
 @media only screen and (max-width: 520px) {
     header {
+        width: 100%;
         background-color: #E6F6F9;
         height: 6.5vh;
     }
