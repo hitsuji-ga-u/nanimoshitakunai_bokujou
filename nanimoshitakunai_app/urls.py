@@ -27,8 +27,8 @@ def get_posts():
     """
 
     end_point = f'/post?&fields=category,id'
-
-    for post in res:
+    post_res = requests.request('GET', url+end_point, headers=headers).json()
+    for post in post_res['contents']:
         post_id = post['id']
         category = post['category']['id']
         if post['category']['parentcategory'] is None:

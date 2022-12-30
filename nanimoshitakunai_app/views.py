@@ -42,8 +42,6 @@ def animals_index(request):
         'animals': ANIMALS
     }
 
-    print('make    animals index   '* 10)
-
     return render(request, 'nanimoshitakunai/animals-index.html', context)
 
 
@@ -65,12 +63,8 @@ def animal(request, animal_id):
         posts.append(requests.request('GET', BASE_URL +
                      subposts_end_pt, headers=HEADERS).json()['contents'])
 
-    # 同じidのanimalを取得
-    print('id', animal_id)
-
     animal_index = -1
     for i, ani in enumerate(ANIMALS):
-        print('animal_id: ', ani['id'])
         if ani['id'] == animal_id:
             animal_index = i
 
