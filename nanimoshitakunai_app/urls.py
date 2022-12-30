@@ -4,10 +4,8 @@ from . import views
 
 # django-distill
 from django_distill import distill_path
-from . import views
 from django.conf import settings
 import requests
-import math
 
 from .animals import ANIMALS
 
@@ -29,7 +27,6 @@ def get_posts():
     """
 
     end_point = f'/post?&fields=category,id'
-    res = requests.request('GET', url=url + end_point, headers=headers).json()['contents']
 
     for post in res:
         post_id = post['id']
@@ -98,3 +95,5 @@ urlpatterns = [
 #     path('animals/<str:animal_id>-index/<str:cat_id>/<str:post_id>', views.post, name='post',
 #          distill_func='get_posts'),
 # ]
+
+

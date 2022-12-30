@@ -30,6 +30,7 @@ body {
     width: 100%;
     max-width: 100%;
     width: 100%;
+
 }
 
 section {
@@ -101,8 +102,15 @@ a:hover{
 
 
 
-
-
+@media only screen and (max-width: 520px) {
+    header {
+        background-color: #E6F6F9;
+        height: 6.5vh;
+    }
+    header img {
+        height: 5vh;;
+    }
+}
 
 
 

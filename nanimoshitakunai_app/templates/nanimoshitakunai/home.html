@@ -9,7 +9,7 @@
 
 {% block body %}
 <div class="home">
-    <img id="mountain" src="{% static 'nanimoshitakunai/imgs/mountain@2x.png' %}">
+    <img id="mountain" src="{% static 'nanimoshitakunai/imgs/mountain.png' %}">
     <img id="nanimoshitakunai" src="{% static 'nanimoshitakunai/imgs/nanimoshitakunai.png' %}"> 
     <img id="sheep2" src="{% static 'nanimoshitakunai/imgs/sheep2.png' %}">
     <img id="game" src="{% static 'nanimoshitakunai/imgs/game.png' %}"> 
@@ -21,7 +21,6 @@
         <li><a href="{% url 'about' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/about.png' %}"></a></li>
         <li><a href="{% url 'animals_index' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/animals.png' %}"></a></li>
         <li><a href="https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
-        <!-- <li><a href="{% url 'shop' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li> -->
         <li><a href="{% url 'playground' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}"></a></li>
         <li><a href="{% url 'faq' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/information.png' %}"></a></li>
     </div>

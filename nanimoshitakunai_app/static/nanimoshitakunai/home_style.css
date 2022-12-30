@@ -1,19 +1,17 @@
 body {
     height: 100vh;
-    width: 100vw;
     overflow: hidden;
     position: relative;
 }
 
 footer {
-    background-color: aqua;
     position: absolute;
     bottom: 0;
     font-size: 40%;
     width: 100%;
 }
 
-footer img{
+footer img {
     display: none;
 }
 
@@ -21,56 +19,65 @@ footer img{
     margin: 0;
     text-align: center;
     width: 100vw;
-    height: 100px;
+    height: 100vh;
 }
 
 .home #mountain {
     position: absolute;
-    width: 1600px;
-    bottom: calc((100vh - 1000px)/2);
-    left: calc((100vw - 1600px)/2); 
+    width: 1920px;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -25%);
 }
 
 #sheep1 {
     position: absolute;
     width: 400px;
-    top: calc((100vh - 1200px)/2 + 440px);
-    left: calc((100vw - 1600px)/2 + 700px);
-    transform: translatex(-50%);
+    left: calc((100vw - 1920px)/2 + 700px);
+    top: 75%;
+    transform: translateY(-90%);
 }
+
 #sheep2 {
     position: absolute;
-    top: calc((100vh - 1200px)/2 + 430px);
-    left: calc((100vw - 1600px)/2 + 360px);
-    transform: translatex(-50%);
+    width: 150px;
+    left: calc((100vw - 1920px)/2 + 450px);
+    top: 75%;
+    transform: translateY(-240%);
 }
+
 #shop {
     position: absolute;
     width: 400px;
-    top: calc((100vh - 1200px)/2 + 620px);
-    left: calc((100vw - 1600px)/2 + 1200px);
-    transform: translatex(-50%);
+    left: calc((100vw - 1920px)/2 + 1260px);
+    top: 75%;
+    transform: translateY(-80%);
+
 }
+
 #game {
     position: absolute;
-    top: calc((100vh - 1200px)/2 + 780px);
-    left: calc((100vw - 1600px)/2 + 220px);
     width: 100px;
+    left: calc((100vw - 1920px)/2 + 375px);
+    top: 75%;
+    transform: translateY(+20%);
     rotate: -30deg;
-    transform: translatex(-50%);
 }
 
 #nanimoshitakunai {
     position: absolute;
-    rotate: -10deg;;
-    top: calc((100vh - 1200px)/2 + 250px);
-    left: calc((100vw - 1600px)/2 + 320px);
+    width: 504px;
+    left: calc((100vw - 1920px)/2 + 610px);
+    top: 75%;
+    transform: translateY(-210%);
+    rotate: -10deg;
+    ;
 }
 
 
 .home__menu {
     position: absolute;
-    bottom: 400px;
+    bottom: 50%;
     right: 8%;
     text-align: left;
 }
@@ -80,13 +87,13 @@ footer img{
 }
 
 #pointer {
-    width: 100px;
     position: absolute;
-    bottom: 250px;
-    left: -120px;
+    width: 90px;
+    top: -170%;
+    left: -110px;
 }
 
-.home__menu a{
+.home__menu a {
     margin: 0px;
     line-height: 2em;
     display: inline-block;
@@ -97,19 +104,89 @@ footer img{
     font-size: 2.2em;
 }
 
-.home__menu li{
+.home__menu li {
     list-style: none;
 }
 
 
-/* @media only screen and (min-width: 1550px) {
-    .home #mountain {
-        position: absolute;
-        width: 100%;
-    }
-}
-*/
 
+@media only screen and (max-width: 720px) {
+    .home #mountain {
+        left: calc((720px - 1920px)/2);
+        transform: translate(0, -25%);
+    }
+
+    #sheep1 {
+        left: calc((720px - 1920px)/2 + 700px);
+    }
+
+    #sheep2 {
+        left: calc((720px - 1920px)/2 + 450px);
+    }
+
+    #shop {
+        left: calc((720px - 1920px)/2 + 1260px);
+
+    }
+
+    #game {
+        left: calc((720px - 1920px)/2 + 375px);
+    }
+
+    #nanimoshitakunai {
+        left: calc((720px - 1920px)/2 + 610px);
+    }
+
+    .home__menu {
+        left: calc((720px - 1920px)/2 + 950px);
+    }
+
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1920px) {
+    .home #mountain {
+        width: 100vw;
+    }
+
+    #sheep1 {
+        width: 20.83%;
+        left: 36.46%;
+    }
+
+    #sheep2 {
+        left: 23.4375%;
+        width: 7.8125%;
+    }
+
+    #shop {
+        width: 20.83%;
+        left: 65.62%;
+    }
+
+    #game {
+        width: 5.21%;
+        left: 19.53%;
+    }
+
+    #nanimoshitakunai {
+        width: 26.25%;
+        left: 31.7708%;
+    }
+    
+}
+
+
+
+
+
+
+
+/* 
 @media only screen and (max-width: 960px) {
     .home__menu {
         position: absolute;
@@ -134,18 +211,84 @@ footer img{
         bottom: 250px;
         left: -83px;
     }
-    
-    
 }
+*/
 
-/*
+
+
 @media only screen and (max-width: 520px) {
     .home #mountain {
-        position: absolute;
-        width: 800px;
-        left: -50px;
+        width: 200%;
+        left: -47%;
+        top: 73%;
+    }
+
+    #sheep1 {
+        top: 75%;
+        width: 75%;
+        left: 14%;
+    }
+
+    #sheep2 {
+        width: 13%;
+        left: 1%;
+        top: 71%;
+    }
+
+    #shop {
+        display: none;
 
     }
 
+    #game {
+        width: 15%;
+        left: 4%;
+        top: 80%;
+        rotate: -35deg;
+    }
+
+    #nanimoshitakunai {
+        width: 40%;
+        left: 35%;
+        top: 44.5%;
+        rotate: -40deg;
+    }
+
+
+
+    .home__menu {
+        left: auto;
+        top: 10%
+    }
+
+    .menu__items {
+        height: 4.5vh;
+    }
+   
+    #pointer {
+        width: 25%;
+        top: -115%;
+        left: 0;
+        transform: translateX(-115%);
+        z-index: -1;
+    }
+
+
+    .home__menu li {
+        list-style: none;
+    }
+
+    
+
+    .home__menu a {
+        margin: 0px;
+        line-height: 6.2vh;
+        display: inline-block;
+        transition-property: all;
+        transition-duration: 0s;
+        transition-delay: 0s;
+        transition-timing-function: ease;
+        font-size: 2.2em;
+    }
+
 }
- */
