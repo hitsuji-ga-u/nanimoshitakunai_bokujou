@@ -4,25 +4,31 @@
 {% block title %}何もしたくない牧場{% endblock %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'nanimoshitakunai/home_style.css' %}">
+<link rel="stylesheet" href="{% static 'nanimoshitakunai/home_style.css' %}">
 {% endblock %}
 
 {% block body %}
 <div class="home">
     <img id="mountain" src="{% static 'nanimoshitakunai/imgs/mountain.png' %}">
-    <img id="nanimoshitakunai" src="{% static 'nanimoshitakunai/imgs/nanimoshitakunai.png' %}"> 
+    <img id="nanimoshitakunai" src="{% static 'nanimoshitakunai/imgs/nanimoshitakunai.png' %}">
     <img id="sheep2" src="{% static 'nanimoshitakunai/imgs/sheep2.png' %}">
-    <img id="game" src="{% static 'nanimoshitakunai/imgs/game.png' %}"> 
+    <img id="game" src="{% static 'nanimoshitakunai/imgs/game.png' %}">
     <img id="shop" src="{% static 'nanimoshitakunai/imgs/shop@2x.png' %}">
     <img id="sheep1" src="{% static 'nanimoshitakunai/imgs/sheep1@3x.png' %}">
-    
+
     <div class="home__menu">
         <img id="pointer" src="{% static 'nanimoshitakunai/imgs/sheep4-longlong.png' %}">
-        <li><a id="about" href="{% url 'about' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/about.png' %}"></a></li>
-        <li><a id="animals" href="{% url 'animals_index' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/animals.png' %}"></a></li>
-        <li><a id="buy" href="https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
-        <li><a id="enjoy" href="{% url 'playground' %}" target="_blank" ><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}"></a></li>
-        <li><a id="information" href="{% url 'faq' %}"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/information.png' %}"></a></li>
+        <li><a id="about" href="{% url 'about' %}"><img class="menu__items"
+                    src="{% static 'nanimoshitakunai/imgs/about.png' %}"></a></li>
+        <li><a id="animals" href="{% url 'animals_index' %}"><img class="menu__items"
+                    src="{% static 'nanimoshitakunai/imgs/animals.png' %}"></a></li>
+        <li><a id="buy"
+                href="https://suzuri.jp/nanimoshitakunai?utm_source=others&utm_medium=social&utm_campaign=shop_share"
+                target="_blank"><img class="menu__items" src="{% static 'nanimoshitakunai/imgs/buy.png' %}"></a></li>
+        <li><a id="enjoy" href="{% url 'playground' %}" target="_blank"><img class="menu__items"
+                    src="{% static 'nanimoshitakunai/imgs/enjoy.png' %}"></a></li>
+        <li><a id="information" href="{% url 'faq' %}"><img class="menu__items"
+                    src="{% static 'nanimoshitakunai/imgs/information.png' %}"></a></li>
     </div>
 </div>
 
@@ -33,21 +39,38 @@
     const enjoy = document.getElementById('enjoy');
     const information = document.getElementById('information');
     const pointer = document.getElementById('pointer')
- 
-    about.addEventListener('mouseover', function() {
-      pointer.style.top = (-170 + 0 * 20)  + '%';
+
+    var y0 = -170
+    var delta = 20
+
+    window.addEventListener('resize', function resizeWindow() {
+        console.log('Resize');
+        if (window.innerWidth > 720) {
+            y0 = -170
+            delta = 20
+            console.log('720')
+        } else {
+            y0 = -114
+            delta = 15
+            console.log(' > 720')
+        }
     });
-    animals.addEventListener('mouseover', function() {
-      pointer.style.top = (-170 + 1 * 20)  + '%';
+
+    about.addEventListener('mouseover', function () {
+        pointer.style.top = (y0 + 0 * delta) + '%';
     });
-    buy.addEventListener('mouseover', function() {
-      pointer.style.top = (-170 + 2 * 20)  + '%';
+    animals.addEventListener('mouseover', function () {
+        pointer.style.top = (y0 + 1 * delta) + '%';
     });
-    enjoy.addEventListener('mouseover', function() {
-      pointer.style.top = (-170 + 3 * 20)  + '%';
+    buy.addEventListener('mouseover', function () {
+        pointer.style.top = (y0 + 2 * delta) + '%';
     });
-    information.addEventListener('mouseover', function() {
-      pointer.style.top = (-170 + 4 * 20)  + '%';
+    enjoy.addEventListener('mouseover', function () {
+        pointer.style.top = (y0 + 3 * delta) + '%';
+    });
+    information.addEventListener('mouseover', function () {
+        pointer.style.top = (y0 + 4 * delta) + '%';
+        console.log(y0, delta)
     });
 
 </script>

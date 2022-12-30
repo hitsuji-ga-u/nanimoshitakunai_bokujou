@@ -133,7 +133,7 @@ footer img {
     }
 
     .home__menu {
-        left: calc((720px - 1920px)/2 + 950px);
+        left: calc((720px - 1920px)/2 + 960px);
     }
 
 
@@ -216,12 +216,14 @@ footer img {
         width: 200%;
         left: -47%;
         top: 73%;
+        z-index: -2;
     }
 
     #sheep1 {
         top: 75%;
         width: 75%;
         left: 14%;
+        z-index: -2;
     }
 
     #sheep2 {
@@ -262,9 +264,8 @@ footer img {
    
     #pointer {
         width: 25%;
-        top: -115%;
-        left: 0;
-        transform: translateX(-115%);
+        top: -114%;
+        left: -30%;
         z-index: -1;
     }
 
