@@ -17,7 +17,7 @@ footer img {
     margin: 0;
     text-align: center;
     width: 100vw;
-    height: 100vh;
+    height: 100vh - 50px;
 }
 
 .home #mountain {
@@ -27,6 +27,7 @@ footer img {
     left: 50%;
     top: 75%;
     transform: translate(-50%, -25%);
+
 }
 
 #sheep1 {
@@ -218,6 +219,7 @@ footer img {
 @media only screen and (max-width: 520px) {
     .home #mountain {
         width: 200%;
+        width: 520px;
         left: -47%;
         top: 73%;
         z-index: -2;
