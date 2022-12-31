@@ -220,7 +220,8 @@ footer img {
     #mountain-wrapper {
         width: 100%;
         top: 73%;
-        height: 100% - 73%;
+        height: 400px;
+        overflow: hidden;
     }
     .home #mountain {
         width: 200%;
