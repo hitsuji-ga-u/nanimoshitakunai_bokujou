@@ -218,6 +218,7 @@ footer img {
 
 @media only screen and (max-width: 520px) {
     #mountain-wrapper {
+        position: absolute;
         width: 100%;
         top: 73%;
         height: 400px;
