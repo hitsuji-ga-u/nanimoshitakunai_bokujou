@@ -234,18 +234,20 @@ footer img {
         top: 75%;
         transform: translate(-50%, -25%);
     } */
-    
+     
     .home #mountain {
+        display: none;
         width: 200%;
         left: -47%;
-        /* top: 73%; */
+        top: 73%;
         z-index: -2;
         top: 0;
         transform: none;
-        /* object-fit: cover; */
-        /* object-position: 0% 0%;
-        transform: none; */
+        object-fit: cover;
+        object-position: 0% 0%;
+        transform: none;
     }
+
 
     #sheep1 {
         top: 75%;
