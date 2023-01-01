@@ -42,8 +42,19 @@
     const information = document.getElementById('information');
     const pointer = document.getElementById('pointer')
 
+
     var y0 = -170
     var delta = 20
+    
+    if (window.innerWidth > 720) {
+            y0 = -170
+            delta = 20
+            console.log('720')
+        } else {
+            y0 = -114
+            delta = 14
+            console.log(' > 720')
+        }
 
     window.addEventListener('resize', function resizeWindow() {
         console.log('Resize');
@@ -52,7 +63,7 @@
             delta = 20
             console.log('720')
         } else {
-            y0 = -80
+            y0 = -114
             delta = 14
             console.log(' > 720')
         }
