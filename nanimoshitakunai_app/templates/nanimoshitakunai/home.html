@@ -46,25 +46,30 @@
     var y0 = -170
     var delta = 20
     
+    const y0_upper720 = -170
+    const delta_upper720 = 20
+    const y0_under720 = -112
+    const delta_under720 = 15
+
     if (window.innerWidth > 720) {
-            y0 = -170
-            delta = 20
+            y0 = y0_upper720
+            delta = delta_upper720
             console.log('720')
         } else {
-            y0 = -114
-            delta = 14
+            y0 = y0_under720
+            delta = delta_under720
             console.log(' > 720')
         }
 
     window.addEventListener('resize', function resizeWindow() {
         console.log('Resize');
         if (window.innerWidth > 720) {
-            y0 = -170
-            delta = 20
+            y0 = y0_upper720
+            delta = delta_upper720
             console.log('720')
         } else {
-            y0 = -114
-            delta = 14
+            y0 = y0_under720
+            delta = delta_under720
             console.log(' > 720')
         }
     });
