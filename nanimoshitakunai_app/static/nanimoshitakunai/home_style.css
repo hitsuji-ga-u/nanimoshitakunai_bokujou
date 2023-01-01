@@ -261,7 +261,7 @@ footer img {
     #sheep2 {
         width: 13%;
         left: 1%;
-        top: 82%;
+        top: 80%;
     }
 
     #shop {
@@ -296,7 +296,7 @@ footer img {
    
     #pointer {
         width: 25%;
-        top: -119%;
+        top: -121%;
         left: -30%;
         z-index: -1;
     }
