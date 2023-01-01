@@ -225,7 +225,7 @@ footer img {
         position: absolute;
         width: 100vw;
         top: 59.5vh;
-        height: 40.5vh;
+        height: calc(93.5vh - 59.5vh);
         overflow: hidden;
         /* transform: translateY(-25%); */
     }
