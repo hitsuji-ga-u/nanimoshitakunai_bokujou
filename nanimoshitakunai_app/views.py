@@ -97,8 +97,8 @@ def shop(request):
     # return render(request, 'nanimoshitakunai/about.html')
 
 
-def access(request):
-    return render(request, 'nanimoshitakunai/access.html')
+def playground(request):
+    return render(request, 'nanimoshitakunai/playground.html')
 
 
 def faq(request):

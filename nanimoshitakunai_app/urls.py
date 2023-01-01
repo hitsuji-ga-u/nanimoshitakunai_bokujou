@@ -51,20 +51,16 @@ def get_posts():
 
 
 urlpatterns = [
-    distill_path('', views.home, name='home',
-        distill_file='home.html'),
+    distill_path('', views.home, name='home'),
 
     distill_path('about/', views.about, name='about'),
-        # distill_file='about.html'),
 
     distill_path('omiyageshop/', views.shop, name='shop',
         distill_status_codes=(200, 302)),
     
-    distill_path('playground/', views.access, name='playground',
-        distill_file='playground.html'),
+    distill_path('playground/', views.playground, name='playground'),
     
-    distill_path('faq/', views.faq, name='faq',
-        distill_file='faq.html'),
+    distill_path('faq/', views.faq, name='faq'),
     
     distill_path('animals/', views.animals_index, name='animals_index'),
 
