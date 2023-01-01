@@ -225,7 +225,7 @@ footer img {
     #mountain-wrapper {
         position: absolute;
         width: 100vw;
-        top: 59.5vh;
+        top: 59.5%;
         height: calc(93.5vh - 59.5vh);
         overflow: hidden;
         /* transform: translateY(-25%); */
@@ -296,7 +296,7 @@ footer img {
    
     #pointer {
         width: 25%;
-        top: -121%;
+        top: -124%;
         left: -30%;
         z-index: -1;
     }
