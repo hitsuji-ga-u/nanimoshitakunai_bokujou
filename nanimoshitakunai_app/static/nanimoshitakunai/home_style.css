@@ -235,9 +235,8 @@ footer img {
         left: -47%;
         z-index: -2;
         top: 0;
-        top: 65%;
-        /* object-fit: cover;
-        object-position: 0% 0%; */
+        object-fit: cover;
+        object-position: 0% 0%;
         transform: none;
     }
 
