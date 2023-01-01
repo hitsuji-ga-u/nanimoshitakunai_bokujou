@@ -225,9 +225,10 @@ footer img {
     #mountain-wrapper {
         position: absolute;
         width: 100vw;
+        height: calc(100vh - 59.5%);
         top: 59.5%;
-        height: calc(93.5vh - 59.5vh);
         overflow: hidden;
+        transform: none;
         /* transform: translateY(-25%); */
     }
 
@@ -252,16 +253,18 @@ footer img {
 
 
     #sheep1 {
-        top: calc(6.5vh + 75%);
         width: 75%;
         left: 14%;
         z-index: -2;
+        top: 59.5%;
+        transform: translatey(-50%);
     }
 
     #sheep2 {
         width: 13%;
         left: 1%;
-        top: 80%;
+        top: 59.5%;
+        transform: translateY(-70%);
     }
 
     #shop {
