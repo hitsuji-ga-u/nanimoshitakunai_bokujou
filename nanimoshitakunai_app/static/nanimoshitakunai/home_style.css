@@ -240,13 +240,10 @@ footer img {
     } */
      
     .home #mountain {
-        /* display: none; */
         width: 200%;
         left: -47%;
-        top: 73%;
         z-index: -2;
         top: 0;
-        transform: none;
         object-fit: cover;
         object-position: 0% 0%;
         transform: none;
@@ -254,7 +251,7 @@ footer img {
 
 
     #sheep1 {
-        top: 75%;
+        top: calc(6.5vh + 75%);
         width: 75%;
         left: 14%;
         z-index: -2;
@@ -263,7 +260,7 @@ footer img {
     #sheep2 {
         width: 13%;
         left: 1%;
-        top: 71%;
+        top: calc(6.5vh + 71%);
     }
 
     #shop {
@@ -274,14 +271,14 @@ footer img {
     #game {
         width: 15%;
         left: 4%;
-        top: 80%;
+        top: calc(6.5vh + 80%);
         rotate: -35deg;
     }
 
     #nanimoshitakunai {
         width: 40%;
         left: 35%;
-        top: 44.5%;
+        top: calc(6.5vh + 44.55%);
         rotate: -40deg;
     }
 
