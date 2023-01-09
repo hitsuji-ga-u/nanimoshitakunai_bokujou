@@ -40,12 +40,12 @@
     const pointer = document.getElementById('pointer')
 
 
-    var y0 = -170
-    var delta = 20
+    var y0 = 0
+    var delta = 0
     
     const y0_upper720 = -170
     const delta_upper720 = 20
-    const y0_under720 = -124
+    const y0_under720 = -128
     const delta_under720 = 16.5
 
     if (window.innerWidth > 720) {
@@ -55,7 +55,9 @@
         } else {
             y0 = y0_under720
             delta = delta_under720
-            console.log(' > 720')
+            console.log(' under 720')
+            console.log(' under 720')
+            console.log(y0, delta)
         }
 
     window.addEventListener('resize', function resizeWindow() {
@@ -67,7 +69,8 @@
         } else {
             y0 = y0_under720
             delta = delta_under720
-            console.log(' > 720')
+            console.log(' under 720')
+            console.log(y0, delta)
         }
     });
 
