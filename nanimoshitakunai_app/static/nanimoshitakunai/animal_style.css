@@ -1,3 +1,11 @@
+.animal {
+    min-height: 0;
+}
+
+.posts {
+    min-height: calc(100vh - 1180px);
+    margin-bottom: 150px;
+}
 
 .animal__info {
     margin-bottom: 80px;

@@ -2,25 +2,85 @@
 {% load static %}
 
 {% block title %}よくある質問{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'nanimoshitakunai/faq_style.css' %}">{% endblock %}
 
 {% block body %}
     <section class="faq">
         <h1>よくある質問</h1>
-        <li>今日って何日ですか？</li>
-        <p>20xx/xx/xxです</p>
-        <li>最近いくら寝ても眠いです。どうしたら良いでしょうか？</li>
-        <li>世界の真ん中にいる虫ってなーんだ？</li>
+        <div class="faq__content">
+            <li>今日って何日ですか？</li>
+            <p class="faq__ans" id="faq__date">20xx/xx/xxです</p>
+        </div>
+        <div class="faq__content">
+            <li>最近いくら寝ても眠いです。どうしたら良いでしょうか？</li>
+            <p class="faq__ans">もっと寝ましょう。</p>
+        </div>
+        <div class="faq__content">
+            <li>世界の真ん中にいる虫ってなーんだ？</li>
+            <p class="faq__ans">蚊（セ 'カ' イだから）。</p>
+        </div>
     </section>
     <section class="question">
         <h1>お問い合わせ・ご感想フォーム</h1>
-        <div class="question__name">
-            <label for="name">お名前</label><br>
-            <input id="name" name="name">
-        </div>
-        <div>
-            <label for="question">お問い合わせ・ご感想内容</label><br>
-            <textarea id="question" rows="10"></textarea>
+        <div id="question__contents" class="question__contents">
+            <div class="question__name">
+                <label for="name">お名前</label><br>
+                <input class="submit__texts" id="name" name="name">
+            </div>
+            <div>
+                <label for="question">お問い合わせ・ご感想内容</label><br>
+                <textarea class="submit__texts" id="question" rows="10"></textarea>
+                <button id="modal__show" type="submit">送信する</button>
+            </div>
             <p>※現在，「楽しかったです」以外のお問い合わせ・ご感想は受けつけておりません．ご了承ください．</p>
         </div>
+
+        <div id="modal" class="modal">
+            <div id="modal__inner" class="modal__inner">
+                <div id="modal__close" class="modal__close">x</div>
+                <p class="text">お問い合わせありがとうございました。</p>
+                <p class="text">送信されました。</p>
+            </div>
+            <div id="modal__background" class="modal__background"></div>
+        </div>
+
     </section>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const show = document.getElementById('modal__show');
+        const close = document.getElementById('modal__close');
+        const inner = document.getElementById('modal__inner');
+        const backGround = document.getElementById('modal__background');
+        const submit = document.getElementById('question__contents')
+        const text = document.getElementsByClassName('submit__texts')
+        
+        const date = document.getElementById('faq__date')
+
+        const today = new Date();
+
+        date.textContent = today.getFullYear() + "/" + today.getMonth()+1 + "/" + today.getDate() + "です。"
+
+        show.addEventListener('click', () => {
+            modal.classList.add('is-show');
+            backGround.classList.add('is-show');
+            submit.classList.add('is-move');
+        })
+    
+        close.addEventListener('click', () => {
+            modal.classList.remove('is-show');
+            backGround.classList.remove('is-show');
+            submit.classList.remove('is-move');
+            text[0].value = "";
+            text[1].value = "";
+        })
+    
+        backGround.addEventListener('click', () => {
+            close.click();
+        })
+
+        inner.addEventListener('click', () => {
+            close.click();
+        })
+    </script>
 {% endblock %}
