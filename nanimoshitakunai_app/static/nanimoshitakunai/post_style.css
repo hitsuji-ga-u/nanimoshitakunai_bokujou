@@ -1,3 +1,23 @@
+.post__cover {
+    margin-bottom: 80px;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.post__title {
+    font-size: 48px;
+}
+
+.post__img {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    border: #657679 2px solid;
+    border-radius: 10px;
+}
+
 .post {
     background-color: #bad8ffaa;
     background-color: #f6f6f6;
@@ -8,24 +28,7 @@
     margin: 60px auto;
 }
 
-.post__cover {
-    margin-bottom: 80px;
-    padding: 40px;
-    text-align: center;
-    width: 100%;
-}
 
-.post__img {
-    margin: 0 auto;
-    text-align: center;
-    width: 80%;
-}
-
-
-.post__title {
-    font-size: 48px;
-    text-align: left;
-}
 
 pre {
     margin: 0px 40px;

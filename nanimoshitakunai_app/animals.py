@@ -28,7 +28,7 @@ ANIMALS = [
         'name': '羊4',
         'id': 'hitsuiji4',
         'path': 'nanimoshitakunai/imgs/sheep4@2x.png',
-        'info': 'タイヤが大好き',
+        'info': 'タイヤから抜けなくなった',
         'skill': 'なし',
         'comment': ''
     },
@@ -52,7 +52,7 @@ ANIMALS = [
         'name': '羊7',
         'id': 'hitsuiji7',
         'path': 'nanimoshitakunai/imgs/sheep7@2x.png',
-        'info': '優しい',
+        'info': 'いかつい全身ドレッド',
         'skill': 'モップのふり',
         'comment': ''
     },

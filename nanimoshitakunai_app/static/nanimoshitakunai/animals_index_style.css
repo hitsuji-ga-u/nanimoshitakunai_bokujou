@@ -6,8 +6,8 @@
 
 .animal {
     background-color: #fafafa;
-    max-width: 60%;
-    margin: 30px 10px;
+    width: 300px;
+    margin: 30px 12px;
     border: #49413C solid 5px;
     border-radius: 10px;
 }
@@ -21,8 +21,8 @@
     z-index: -100;
 }
 .animal__properties {
-    padding-left: 20px;
-    padding-bottom: 10px;
+    padding: auto;
+
 }
 .animal__name {
     margin: 0 auto;
@@ -31,5 +31,32 @@
 
 li {
     list-style: none;
+    margin: 0 4px;
 }
 
+
+@media only screen and (max-width: 520px) {
+    .animal {
+        width: 45%;
+        border: #49413C solid 2px;
+        border-radius: 5px;
+        margin: 20px 5px;
+    }
+    .animal__pic {
+        border-bottom: solid 2px #49413C;
+        border-radius: 2.5px 2.5px 0 0 ;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+    li {
+        font-size: 14px;
+    }
+    p {
+        margin: 0 4px;
+        margin-bottom: 5px;
+        font-size: 11px;
+    }
+    
+}

@@ -18,9 +18,11 @@
             <a class="animal" href="{% url 'animal' animal.id %}">
                 <img class="animal__pic" src="{% static  animal.path %}">
                 <div class="animal__properties">
-                <h2 class="animal__name">{{ animal.name }}</h2>
-                    <li>特徴：{{ animal.info }}</li>
-                    <li>得意なこと：{{ animal.skill }}</li>
+                    <h2 class="animal__name">{{ animal.name }}</h2>
+                    <li>特徴：</li>
+                        <p>{{ animal.info }}</p>
+                    <li>得意なこと：</li>
+                        <p>{{ animal.skill }}</p>
                 </div>
             </a>
             {% endfor %}
