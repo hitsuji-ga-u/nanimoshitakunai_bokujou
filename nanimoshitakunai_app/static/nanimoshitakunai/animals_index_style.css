@@ -22,11 +22,11 @@
 }
 .animal__properties {
     padding: auto;
-
 }
+
 .animal__name {
     margin: 0 auto;
-    color: #aed768;
+    text-align: center;
 }
 
 li {

@@ -67,7 +67,9 @@ def animal(request, animal_id):
     for i, ani in enumerate(ANIMALS):
         if ani['id'] == animal_id:
             animal_index = i
-
+            break
+    
+    print(animal_index)
     if animal_index < 0:
         raise ValueError()
 
@@ -76,6 +78,7 @@ def animal(request, animal_id):
         'cat_posts': posts
     }
 
+    pprint(context)
     return render(request, 'nanimoshitakunai/animal.html', context)
 
 

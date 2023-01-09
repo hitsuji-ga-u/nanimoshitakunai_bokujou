@@ -7,11 +7,13 @@
 
 
 <div class="post__cover">
-    {% if "thumbnail" in post %}
-    <img class="post__img" src="{{ post.thumbnail.url }}">
-    {% else %}
-    <img class="post__img" src="{% static 'nanimoshitakunai/imgs/shop.png' %}">
-    {% endif %}
+    <div class="post__img">
+        {% if "thumbnail" in post %}
+        <img src="{{ post.thumbnail.url }}">
+        {% else %}
+        <img src="{% static 'nanimoshitakunai/imgs/shop.png' %}">
+        {% endif %}
+    </div>
     <div class="post__title">
     {{post.title}}
     </div>

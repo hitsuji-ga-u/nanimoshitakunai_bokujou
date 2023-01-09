@@ -28,7 +28,7 @@ ANIMALS = [
         'name': '羊4',
         'id': 'hitsuiji4',
         'path': 'nanimoshitakunai/imgs/sheep4@2x.png',
-        'info': 'タイヤから抜けなくなった',
+        'info': 'タイヤから抜けなくなっちゃった',
         'skill': 'なし',
         'comment': ''
     },
@@ -62,7 +62,7 @@ ANIMALS = [
         'path': '羊9のパス',
         'skill': 'なし',
         'info': 'なし',
-        'comment': 'こっち見るな'
+        'comment': 'こっち見るんぢゃねーよ'
     },
     {
         'name': '牧場いぬ',

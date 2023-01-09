@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-    color: #748f45;
+    color: #87a751;
     padding: 0 10px;
     margin: 40px 30px 10px;
     font-weight: inherit;
@@ -89,6 +89,7 @@ footer #foot__copy {
 a {
     text-decoration: none;
     color: #49413C;
+    display: block;
 }
 
 a:visited {

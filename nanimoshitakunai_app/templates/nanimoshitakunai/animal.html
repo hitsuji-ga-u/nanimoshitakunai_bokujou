@@ -24,11 +24,9 @@
 <section class="posts">
     {% for posts in cat_posts %}
     {% if posts|length %}
-    <div class="animal__category">{{ posts.0.category.category }}についてのはなし</div>
+    <h2 class="animal__category">{{ posts.0.category.category }}についてのはなし</h2>
 
-    <div class="animal__slider">
-        <div class="animal__handler" id="animal__handler-prev"></div>
-        <div class="animal__posts">
+    <div class="animal__category-index">
         {% for post in posts %}
         <a href="{% url 'post' animal.id post.category.id post.id %}">
             <div class="animal__post">
@@ -37,7 +35,6 @@
                 {% else %}
                 <img class="animal__post_img" src="{% static 'nanimoshitakunai/imgs/shop.png' %}">
                 {% endif %}
-                
                 <div class="animal__post_title">
                     <p>{{ post.title }}</p>
                 </div>
@@ -45,12 +42,16 @@
         </a>
         {% endfor %}
         </div>
-        <div class="animal__handler" id="animal__handler-next"></div>
     </div>
-    
-
     {% endif %}
     {% endfor %}
+
+    {% if cat_posts.0|length_is:"0" %}
+    <div class="animal__category-index">
+        <h2 class="animal__category">ひとこと</h2>
+        <p>{{ animal.comment }}</p>
+    </div>
+    {% endif %}
 </section>
 {% endblock %}
 
