@@ -60,8 +60,12 @@ button:hover {
     0% {
         transform: translateX(0px) translateY(0px) rotate(0deg);
     }
+
+    50% {
+        transform: translateX(-30%) translateY(40%) rotate(500deg)
+    }
     100% {
-        transform: translateX(300%) translateY(-500%) rotate(1200deg);
+        transform: translateX(300%) translateY(-500%) rotate(1000deg);
     }
 }
 
