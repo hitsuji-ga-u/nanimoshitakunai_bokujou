@@ -52,7 +52,7 @@ button:hover {
 }
 
 .is-move {
-    animation: moveframe .4s linear;
+    animation: moveframe .5s linear;
     animation-fill-mode: forwards;
 }
 
@@ -65,7 +65,7 @@ button:hover {
         transform: translateX(-30%) translateY(60%) rotate(300deg)
     }
     100% {
-        transform: translateX(300%) translateY(-800%) rotate(600deg);
+        transform: translateX(200%) translateY(-1000%) rotate(600deg);
     }
 }
 
