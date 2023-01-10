@@ -17,12 +17,14 @@
 
 input {
     margin: 0 20px;
+    border: #49413C solid 0.1px;
 }
 
 textarea {
     display: block;
     width: 80%;
     margin: 0 20px;
+    border: #49413C solid 0.1px;
 }
 
 button {
@@ -30,7 +32,7 @@ button {
     font-weight: 700;
     line-height: 1.5;
     display: block;
-    margin: 15px auto;
+    margin: 20px auto;
     padding: 0.5rem 2rem;
     cursor: pointer;
     -webkit-user-select: none;
@@ -59,7 +61,7 @@ button:hover {
         transform: translateX(0px) translateY(0px) rotate(0deg);
     }
     100% {
-        transform: translateX(1500px) translateY(-1500px) rotate(300deg);
+        transform: translateX(300%) translateY(-500%) rotate(300deg);
     }
 }
 
