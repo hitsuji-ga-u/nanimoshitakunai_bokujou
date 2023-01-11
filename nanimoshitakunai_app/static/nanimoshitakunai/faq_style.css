@@ -62,13 +62,14 @@ button:hover {
     }
 
     45% {
-        transform: translateX(-30%) translateY(60%) (20deg)
+        transform: translateX(-30%) translateY(60%) (20deg);
     }
+
     50% {
-        transform: translateX(-30%) translateY(60%) (20deg)
+        transform: translateX(-30%) translateY(60%) (20deg);
     }
     100% {
-        transform: translateX(200%) translateY(-1000%) (90deg);
+        transform: translateX(200%) translateY(-1000%) (-90deg);
     }
 }
 
