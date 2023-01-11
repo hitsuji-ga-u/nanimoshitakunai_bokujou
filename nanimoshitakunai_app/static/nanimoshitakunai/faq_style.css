@@ -58,14 +58,17 @@ button:hover {
 
 @keyframes  moveframe {
     0% {
-        transform: translateX(0px) translateY(0px) rotate(0deg);
+        transform: translateX(0px) translateY(0px) (0deg);
     }
 
+    45% {
+        transform: translateX(-30%) translateY(60%) (20deg)
+    }
     50% {
-        transform: translateX(-30%) translateY(60%) rotate(300deg)
+        transform: translateX(-30%) translateY(60%) (20deg)
     }
     100% {
-        transform: translateX(200%) translateY(-1000%) rotate(600deg);
+        transform: translateX(200%) translateY(-1000%) (90deg);
     }
 }
 
