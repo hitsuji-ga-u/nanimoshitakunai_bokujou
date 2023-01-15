@@ -26,7 +26,7 @@ def get_posts():
 
     """
 
-    end_point = f'/post?&fields=category,id'
+    end_point = f'/post?&fields=category,id&limit=100'
     post_res = requests.request('GET', url+end_point, headers=headers).json()
     for post in post_res['contents']:
         post_id = post['id']
